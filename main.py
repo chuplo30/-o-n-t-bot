@@ -3,9 +3,9 @@ from discord.ext import commands, tasks
 import random, asyncio, os, threading
 from flask import Flask, jsonify
 
-CHANNEL_IDS = [123456789012345678]
+CHANNEL_IDS = [1549102142902632478]
 WORDS_FILE = "words.txt"
-ROUND_TIMEOUT = 120
+ROUND_TIMEOUT = 9999
 HINT_AFTER = 45
 HINT_REVEAL_CHARS = 3
 PORT = 10000
