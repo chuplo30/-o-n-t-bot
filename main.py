@@ -12,24 +12,6 @@ PORT = 10000
 
 print(f"Da load {len(WORDS)} tu")
 
-
-def load_words(path=WORDS_FILE):
-    words = []
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Khong tim thay {path}. Chay world.py truoc.")
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line or "|" not in line:
-                continue
-            hint, answer = line.split("|", 1)
-            words.append({"hint": hint.strip(), "answer": answer.strip()})
-    return words
-
-
-WORDS = load_words()
-print(f"Da load {len(WORDS)} tu tu {WORDS_FILE}")
-
 intents = discord.Intents.default()
 intents.message_content = True
 intents.reactions = True
