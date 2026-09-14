@@ -1,14 +1,16 @@
 import discord
 from discord.ext import commands, tasks
-import random, asyncio, os, threading
+import random, asyncio, threading
 from flask import Flask, jsonify
+from world import WORDS
 
 CHANNEL_IDS = [1549102142902632478]
-WORDS_FILE = "words.txt"
 ROUND_TIMEOUT = 9999
 HINT_AFTER = 45
 HINT_REVEAL_CHARS = 3
 PORT = 10000
+
+print(f"Da load {len(WORDS)} tu")
 
 
 def load_words(path=WORDS_FILE):
